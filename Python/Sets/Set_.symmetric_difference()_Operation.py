@@ -45,11 +45,14 @@
 
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-a = int(raw_input())
-b = raw_input().split()
-b = list(map(int, b))
-c = int(raw_input())
-d = raw_input().split()
-d = list(map(int, d))
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+n1 = set(map(int,input().split()))
+m = int(input())
+m1 = set(map(int,input().split()))
+ans = n1.symmetric_difference(m1)
+count = 0
+for i in ans:
+    count = count + 1
+print(count)    
 
-print len(set(b).symmetric_difference(set(d)))
