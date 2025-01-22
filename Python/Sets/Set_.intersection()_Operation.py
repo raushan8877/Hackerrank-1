@@ -43,11 +43,13 @@
 # Output the total number of students who have subscriptions to both English and French newspapers.
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-eng_num = int(raw_input())
-eng_set = raw_input().split()
-eng_set = set(map(int, eng_set))
-fren_num = int(raw_input())
-fren_set = raw_input().split()
-fren_set = set(map(int, fren_set))
+n = int(input())
+n1 = set(map(int,input().split()))
+m = int(input())
+m1 = set(map(int,input().split()))
+ans = n1.intersection(m1)
+count = 0
+for i in ans:
+    count = count + 1
+print(count)    
 
-print len(eng_set.intersection(fren_set))
